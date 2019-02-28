@@ -89,7 +89,7 @@ router.delete('/:id', (req, res) => {
   commentData.splice(commentData.id, 1);
 
   res.status(202).json({
-    msg: 'See you later sucker! That comment is out of here...',
+    msg: 'See you later sucker! That comment is out of here....',
     comments: commentData,
   });
 });
