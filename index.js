@@ -1,5 +1,6 @@
 // moment is a wrapper around the Date object in JS
 const moment = require('moment');
+const cors = require('cors');
 
 require('dotenv').config();
 const express = require('express');
@@ -25,6 +26,8 @@ const app = express();
 app.use(express.json());
 // form data
 app.use(express.urlencoded({ extended: false }));
+
+app.use(cors());
 
 // logger middleware
 // app.use(logger);
