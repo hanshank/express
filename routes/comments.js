@@ -21,7 +21,7 @@ const router = express.Router();
 // get all comments
 router.get('/', (req, res) => {
   const comments = db.get('comments').value();
-  res.json(commentData);
+  res.json(comments);
 });
 
 // get a single comment by id
