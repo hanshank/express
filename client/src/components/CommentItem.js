@@ -7,6 +7,9 @@ class CommentItem extends React.Component {
     return (
       <div className="message-board-comment-item">
         <p>{comment.text}</p>
+        <button type="button" className="delete-button">
+          x
+        </button>
       </div>
     );
   }
