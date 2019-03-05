@@ -1,0 +1,41 @@
+.message-board-comment-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid hsl(217, 50%, 20%);
+  padding: 1rem 20px;
+
+  transition: background-color 150ms;
+}
+
+.message-board-comment-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.message-board-comment-item button {
+  float: right;
+}
+
+.message-board-comment-item .delete-button {
+  display: inline-block;
+  margin-left: 2px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 350ms;
+}
+
+.message-board-comment-item:hover .delete-button,
+.message-board-comment-item[contenteditable] .save-button {
+  opacity: 1;
+}
+
+.message-board-comment-item .save-button {
+  opacity: 0;
+  transition: opacity 350ms;
+}
+
+.message-board-comment-item p {
+  min-width: 100%;
+}
