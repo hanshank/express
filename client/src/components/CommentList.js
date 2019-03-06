@@ -4,12 +4,12 @@ import CommentItem from './CommentItem';
 
 class CommentList extends React.Component {
   render() {
-    const { comments } = this.props;
+    const { comments, onDelete } = this.props;
 
     return (
       <div className="message-board-comment-list">
         {comments.map(comment => (
-          <CommentItem comment={comment} key={comment.id} />
+          <CommentItem comment={comment} key={comment.id} onDeleteMe={() => onDelete(comment.id)} />
         ))}
       </div>
     );
